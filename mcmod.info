@@ -1,0 +1,21 @@
+{
+  "modinfoversion": 2,
+  "modlist": [{
+    "modid": "HCD",
+    "name": "Hardcoredoor",
+    "description": "Whyare these doors so hard to make? Who did this, and for what nerferious ends? O_o",
+    "version": "",
+    "mcversion": "1.6.2",
+    "url": "",
+    "updateUrl": "",
+    "authors": [ "Bigglesw0rth" ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [ ],
+    "parent": "",
+    "requiredMods": [ ],
+    "dependencies": [ ],
+    "dependants": [ ],
+    "useDependencyInformation": "false"
+  }]
+}
