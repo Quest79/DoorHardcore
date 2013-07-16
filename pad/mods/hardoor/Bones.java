@@ -1,4 +1,4 @@
-package pad.hardoor;
+package pad.mods.hardoor;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -8,13 +8,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid="HCD", name="Hardcoredoor", version="0.1")
+@Mod(modid="ModIDName", name="ModName", version="Version")
 @NetworkMod(clientSideRequired = true, serverSideRequired=false)
 
-public class HardcoreDoor {
+public class Bones {
 	
 	//Instance of Mod
-	public static HardcoreDoor instance;
+	public static Bones instance;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {	
