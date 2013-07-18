@@ -40,11 +40,11 @@ public class HardcoreDoor {
 		LanguageRegistry.addName(iscrews, "Iron Screws");
 				
 		/* Recipes */
-		GameRegistry.addRecipe(new ItemStack(hinge, 1), new Object[]{"xxx", "x  ", "xxx", 'x', Item.ingotIron});
+		GameRegistry.addRecipe(new ItemStack(hinge, 1), new Object[]{"x x", "xxx", "x x", 'x', Item.ingotIron});
 		GameRegistry.addRecipe(new ItemStack(woodpanel, 1), new Object[]{"xx ", "xx ", "xx ", 'x', Block.wood});
 		GameRegistry.addRecipe(new ItemStack(iscrews, 1), new Object[]{" x ", "xxx", " x ", 'x', Item.ingotIron});
 		GameRegistry.addRecipe(new ItemStack(hinge2, 1), new Object[]{"x x", "xcx", "x x", 'x', iscrews, 'c', hinge});
-		GameRegistry.addRecipe(new ItemStack(Block.doorWood, 1), new Object[]{"xcc", "xcc", "xcc", 'x', hinge2, 'c', woodpanel});
+		GameRegistry.addRecipe(new ItemStack(Item.doorWood, 1), new Object[]{"xcc", "xcc", "xcc", 'x', hinge2, 'c', woodpanel});
 		
 	}
 	
