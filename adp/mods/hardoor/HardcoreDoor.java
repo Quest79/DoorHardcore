@@ -1,12 +1,14 @@
-package pad.mods.hardoor;
+package adp.mods.hardoor;
 
-import pad.mods.hardoor.items.Items16;
+import adp.mods.common.Cons;
+import adp.mods.hardoor.items.Items16;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLLoadEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -16,13 +18,13 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = HardcoreDoor.modID, name = "HardDoor", version = "1.0")
+@Mod(modid = Cons.MOD.ID, name = Cons.MOD.NAME, version = Cons.MOD.VERSION)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class HardcoreDoor {
 
 	/* Mod setup and information */
+	@Instance(Cons.MOD.ID)
 	public static HardcoreDoor instance;
-	public static final String modID = "HardDoor";
 	
 	/* New Items section */
 	public final static Item hinge = new Items16(4000).setUnlocalizedName("Hinge2");

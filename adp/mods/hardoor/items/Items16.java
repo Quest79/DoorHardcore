@@ -1,4 +1,4 @@
-package pad.mods.hardoor.items;
+package adp.mods.hardoor.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,6 +14,7 @@ public class Items16 extends Item{
 		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister reg){
 		this.itemIcon = reg.registerIcon("common:" + this.getUnlocalizedName().substring(5));

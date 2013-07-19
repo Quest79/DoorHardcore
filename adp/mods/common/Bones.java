@@ -1,4 +1,4 @@
-package pad.mods.hardoor;
+package adp.mods.common;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
