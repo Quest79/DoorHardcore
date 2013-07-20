@@ -13,7 +13,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 
 public class Bones {
 	
-	//Instance of Mod
+	/* Instance of Mod */
 	public static Bones instance;
 	
 	@EventHandler
