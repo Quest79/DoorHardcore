@@ -30,6 +30,8 @@ public class HardcoreDoor {
 	public final static Item iscrews = new Items16(4002).setUnlocalizedName("iscrews");
 	public final static Item hinge2 = new Items16(4003).setUnlocalizedName("Hinge3");
 	public final static Item doorknob = new Items16(4004).setUnlocalizedName("doorknob");
+	public final static Item gear1 = new Items16(4005).setUnlocalizedName("gear1");
+	public final static Item nugiron = new Items16(4006).setUnlocalizedName("nug_iron");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
@@ -58,33 +60,46 @@ public class HardcoreDoor {
 		LanguageRegistry.addName(hinge2, "Hinge with Iron Screws");
 		LanguageRegistry.addName(iscrews, "Iron Screws");
 		LanguageRegistry.addName(doorknob, "Door Knob");
+		LanguageRegistry.addName(gear1, "Simple Gear");
+		LanguageRegistry.addName(nugiron, "Iron Nugget");
 	}
 	
-	private void InitRecipeReg(){		
-		GameRegistry.addRecipe(new ItemStack(hinge, 		1), new Object[]{
-			"x x", "xxx", "x x", 
+	private void InitRecipeReg(){
+		GameRegistry.addRecipe(new ItemStack(Item.ingotIron, 1), new Object[]{
+			"xxx", "xxx", "xxx", 
+			'x', nugiron
+			});
+		
+		GameRegistry.addRecipe(new ItemStack(nugiron, 9), new Object[]{
+			"   ", " x ", "   ", 
 			'x', Item.ingotIron
 			});
 		
-		GameRegistry.addRecipe(new ItemStack(woodpanel, 	1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(hinge, 1), new Object[]{
+			"x x", "xxx", "x x", 
+			'x', nugiron
+			});
+		
+		GameRegistry.addRecipe(new ItemStack(woodpanel,1), new Object[]{
 			"xx ", "xx ", "xx ", 
 			'x', Block.wood
 			});
 		
-		GameRegistry.addRecipe(new ItemStack(iscrews, 		1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(iscrews, 1), new Object[]{
 			" x ", "xxx", " x ", 
-			'x', Item.ingotIron
+			'x', nugiron
 			});
 		
-		GameRegistry.addRecipe(new ItemStack(hinge2, 		1), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(hinge2, 1), new Object[]{
 			"x x", "xcx", "x x", 
 			'x', iscrews,
 			'c', hinge
 			});
 		
-		GameRegistry.addRecipe(new ItemStack(doorknob, 		1), new Object[]{
-			" xx", "xxx", " xx", 
-			'x', Item.ingotIron
+		GameRegistry.addRecipe(new ItemStack(doorknob, 1), new Object[]{
+			"xx ", "cx ", "cxx", 
+			'x', Item.ingotIron,
+			'c', gear1
 			});
 		
 		GameRegistry.addRecipe(new ItemStack(Item.doorWood, 1), new Object[]{
@@ -92,6 +107,11 @@ public class HardcoreDoor {
 			'x', hinge2, 
 			'c', woodpanel,
 			'n', doorknob
+			});
+		
+		GameRegistry.addRecipe(new ItemStack(gear1, 1), new Object[]{
+			" x ", "x x", " x ", 
+			'x', nugiron
 			});
 	}
 	
