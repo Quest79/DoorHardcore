@@ -11,11 +11,10 @@ public class Items16 extends Item{
 	public Items16(int id){
 		super(id);
 		this.setMaxStackSize(16);
-		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
 	@Override
-	@SideOnly(Side.CLIENT)
+		@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister reg){
 		this.itemIcon = reg.registerIcon("common:" + this.getUnlocalizedName().substring(5));
 	}

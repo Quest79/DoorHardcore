@@ -1,10 +1,12 @@
 package adp.mods.hardoor;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import adp.mods.common.Cons;
 import adp.mods.hardoor.items.Items16;
+import adp.mods.hardoor.items.Items64;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -24,19 +26,30 @@ public class HardcoreDoor {
 	@Instance(Cons.MOD.ID)
 	public static HardcoreDoor instance;
 	
+	public static CreativeTabs hcdTab = new CreativeTabs("HCD_HCDTab"){
+		@Override
+		public ItemStack getIconItemStack(){
+			return new ItemStack(hinge);
+		}
+	};
+	
+	//int hingeID;
+	
 	/* New Items section */
-	public final static Item hinge = new Items16(4000).setUnlocalizedName("Hinge2");
-	public final static Item woodpanel = new Items16(4001).setUnlocalizedName("woodpanel");
-	public final static Item iscrews = new Items16(4002).setUnlocalizedName("iscrews");
-	public final static Item hinge2 = new Items16(4003).setUnlocalizedName("Hinge3");
-	public final static Item doorknob = new Items16(4004).setUnlocalizedName("doorknob");
-	public final static Item gear1 = new Items16(4005).setUnlocalizedName("gear1");
-	public final static Item nugiron = new Items16(4006).setUnlocalizedName("nug_iron");
+	public final static Item hinge = new Items16(4000).setUnlocalizedName("Hinge2").setCreativeTab(hcdTab);
+	public final static Item hinge2 = new Items16(4001).setUnlocalizedName("Hinge3").setCreativeTab(hcdTab);
+	public final static Item iscrews = new Items16(4002).setUnlocalizedName("iscrews").setCreativeTab(hcdTab);
+	public final static Item woodpanel = new Items16(4003).setUnlocalizedName("woodpanel").setCreativeTab(hcdTab);
+	public final static Item nugiron = new Items64(4004).setUnlocalizedName("nug_iron").setCreativeTab(hcdTab);
+	public final static Item gear1 = new Items16(4005).setUnlocalizedName("gear1").setCreativeTab(hcdTab);
+	public final static Item doorknob = new Items16(4006).setUnlocalizedName("doorknob").setCreativeTab(hcdTab);
+	
+
 	
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event){
+	public void preInit(FMLPreInitializationEvent event){	
 		this.InitLangReg();
-		this.InitRecipeReg();		
+		this.InitRecipeReg();
 	}
 	
 	@EventHandler
@@ -55,6 +68,7 @@ public class HardcoreDoor {
 	}
 
 	private void InitLangReg(){
+		LanguageRegistry.instance().addStringLocalization("itemGroup.HCD_HCDTab","HardDoor");
 		LanguageRegistry.addName(hinge, "Hinge");
 		LanguageRegistry.addName(woodpanel, "Wooden Panel");
 		LanguageRegistry.addName(hinge2, "Hinge with Iron Screws");
